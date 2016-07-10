@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compass Demo</title>
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic);
+            body {font-family: "Source Sans Pro";}
+            body, textarea {background-color: #1e1f22; color: #bfbfbf;}
+            button { width: 50px; }
+        </style>
+        <link rel="stylesheet" type="text/css" href="compass.css" />
+        
+        <script src="compass.js"></script>
+        <script>
+            var c = new compass("compass");
+            c.setCompass(1); // Set a default value 
+        </script>
+    </head>
+    <body>
+    
+        <canvas id="compass" width="200" height="200"></canvas>
+
+        <button onclick="c.animateCompass(10);">10</button>
+        <button onclick="c.animateCompass(90);">90</button>
+        <button onclick="c.animateCompass(170);">170</button>
+        <button onclick="c.animateCompass(190);">190</button>
+        <button onclick="c.animateCompass(270);">270</button>
+        <button onclick="c.animateCompass(350);">350</button>
+        
+    </body>
+</html>
