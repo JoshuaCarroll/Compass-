@@ -1,3 +1,11 @@
+/*
+Compass- is copywritten 2016 Joshua Carroll.
+It is released under the MIT License.  Basically it lets you do anything you want with the code as 
+long as you provide attribution back to me and don't hold me liable.
+
+https://github.com/JoshuaCarroll/Compass-/
+*/
+
 var _objGlobalCompassForCallbackFunctions;
 function compass (canvasElementId) {
     document.getElementById(canvasElementId).style.backgroundImage = "url(https://dl.dropboxusercontent.com/u/20650772/compass.png)";
