@@ -7,9 +7,10 @@ https://github.com/JoshuaCarroll/Compass-/
 */
 
 var _objGlobalCompassForCallbackFunctions;
-function compass (canvasElementId) {
-    document.getElementById(canvasElementId).style.backgroundImage = "url(https://dl.dropboxusercontent.com/u/20650772/compass.png)";
+function Compass (canvasElementId) {
     
+    // Please do not hot link to my Dropbox in production.
+    document.getElementById(canvasElementId).style.backgroundImage = "url(https://dl.dropboxusercontent.com/u/20650772/compass.png)";
     this.needleImageURL = "https://dl.dropboxusercontent.com/u/20650772/needle.png";
     
     // --------------------------------------------
