@@ -53,6 +53,7 @@ function Compass (canvasElementId) {
     };
     
     this.animateCompass = function (target) {
+        target = Math.round(target);
         var objCompass = _objGlobalCompassForCallbackFunctions;
 
         if (objCompass.timeout) {
