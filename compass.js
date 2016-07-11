@@ -1,5 +1,7 @@
 var _objGlobalCompassForCallbackFunctions;
 function compass (canvasElementId) {
+    document.getElementById(canvasElementId).style.backgroundImage = "url(https://dl.dropboxusercontent.com/u/20650772/compass.png)";
+    
     this.needleImageURL = "https://dl.dropboxusercontent.com/u/20650772/needle.png";
     
     // --------------------------------------------
