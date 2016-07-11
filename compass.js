@@ -14,6 +14,7 @@ function Compass (canvasElementId) {
     this.needleImageURL = "https://dl.dropboxusercontent.com/u/20650772/needle.png";
     
     // --------------------------------------------
+    this.debugMode = false;
     
     this.needle =  null;
     this.ctx = null;
@@ -47,9 +48,7 @@ function Compass (canvasElementId) {
             else {
                 delta = d2;
             }
-
         }
-
         return delta;
     };
     
@@ -88,37 +87,43 @@ function Compass (canvasElementId) {
     };
     
     this.log = function (str) {
-        if(typeof console === "undefined") {
-            console = {
-                log: function() { }
-            };
-        }
-        else {
-            console.log(str);
+        if (_objGlobalCompassForCallbackFunctions.debugMode) {
+            if(typeof console === "undefined") {
+                console = {
+                    log: function() { }
+                };
+            }
+            else {
+                console.log(str);
+            }
         }
     };
     
     this.error = function (str) {
-        if(typeof console === "undefined") {
-            console = {
-                error: function(str) { 
-                    alert("Error:\r\n\r\n" + str);
-                }
-            };
-        }
-        else {
-            console.error(str);
+        if (_objGlobalCompassForCallbackFunctions.debugMode) {
+            if(typeof console === "undefined") {
+                console = {
+                    error: function(str) { 
+                        alert("Error:\r\n\r\n" + str);
+                    }
+                };
+            }
+            else {
+                console.error(str);
+            }
         }
     };
     
     this.debug = function (str) {
-        if(typeof console === "undefined") {
-            console = {
-                debug: function() { }
-            };
-        }
-        else {
-            console.debug(str);
+        if (_objGlobalCompassForCallbackFunctions.debugMode) {
+            if(typeof console === "undefined") {
+                console = {
+                    debug: function() { }
+                };
+            }
+            else {
+                console.debug(str);
+            }
         }
     };
     
