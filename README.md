@@ -3,10 +3,6 @@ Compass-
 
 This is a compass made with the HTML5 canvas and JavaScript. You can see a live demo at [http://codepen.io/JoshuaCarroll/pen/dXVoVV](http://codepen.io/JoshuaCarroll/pen/dXVoVV).
 
-#### Contributing
-
-Contributions to this project can be made by using the script and providing feedback or by assisting in the programming and submitting pull requests. In either case, please read the [contributing page](https://github.com/JoshuaCarroll/Raspberry-Pi-Weather-Station-Dashboard/blob/master/CONTRIBUTING.md) for instructions.
-
 ----------
 
 # Usage
