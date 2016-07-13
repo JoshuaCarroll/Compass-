@@ -52,7 +52,7 @@ function Compass (canvasElementId) {
         return delta;
     };
     
-    this.animateCompass = function (target) {
+    this.animate = function (target) {
         target = Math.round(target);
         var objCompass = _objGlobalCompassForCallbackFunctions;
 
@@ -65,18 +65,18 @@ function Compass (canvasElementId) {
 
             if (delta != 0) {
                 var nextStep = (delta > 0 ? objCompass.currentAzimuth+1 : objCompass.currentAzimuth-1);
-                objCompass.setCompass(nextStep);
+                objCompass.set(nextStep);
                 var interval = Math.round((180 - Math.abs(delta)) / 15);
 
                 objCompass.debug("target = " + target + "\tdelta = " + delta + "\tnextStep = " + nextStep + "\tinterval = " + interval);
 
-                objCompass.timeout = setTimeout(objCompass.animateCompass, interval, target);
+                objCompass.timeout = setTimeout(objCompass.animate, interval, target);
             }
         }
     };
     
-    this.setCompass = function (degrees) {
-        this.debug("setCompass(" + degrees + ")");
+    this.set = function (degrees) {
+        this.debug("set(" + degrees + ")");
         
         this.clearCanvas();
         this.ctx.save();
@@ -137,7 +137,7 @@ function Compass (canvasElementId) {
         this.needle = new Image();
         this.needle.src = this.needleImageURL;
         this.needle.onload = function() {
-            _objGlobalCompassForCallbackFunctions.setCompass(1);
+            _objGlobalCompassForCallbackFunctions.set(1);
         };
     } else {
         this.error("HTML5 canvas is not supported in this browser. Please upgrade to use it.");
