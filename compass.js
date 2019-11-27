@@ -9,9 +9,9 @@ https://github.com/JoshuaCarroll/Compass-/
 var _objGlobalCompassForCallbackFunctions;
 function Compass (canvasElementId) {
     
-    // Please do not hot link to my Dropbox in production.
-    document.getElementById(canvasElementId).style.backgroundImage = "url(https://dl.dropboxusercontent.com/u/20650772/compass.png)";
-    this.needleImageURL = "https://dl.dropboxusercontent.com/u/20650772/needle.png";
+    // Depending on your environment, it might be better to make local copies of these two files and change these references.
+    document.getElementById(canvasElementId).style.backgroundImage = "url(https://raw.githubusercontent.com/JoshuaCarroll/Compass-/master/compass.png)";
+    this.needleImageURL = "https://raw.githubusercontent.com/JoshuaCarroll/Compass-/master/needle.png";
     
     // --------------------------------------------
     this.debugMode = false;
